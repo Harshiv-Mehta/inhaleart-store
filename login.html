@@ -87,8 +87,14 @@
               </label>
               <label>
                 <span>Password</span>
-                <input name="password" type="password" placeholder="Enter your password" required />
+                <div class="password-field">
+                  <input name="password" type="password" placeholder="Enter your password" required />
+                  <button class="password-toggle" type="button" data-toggle-password>
+                    Show
+                  </button>
+                </div>
               </label>
+              <button id="forgotPasswordBtn" class="auth-inline-link" type="button">Forgot password?</button>
               <button class="button-primary" type="submit">Login to my account</button>
             </form>
 
@@ -103,7 +109,12 @@
               </label>
               <label>
                 <span>Create password</span>
-                <input name="password" type="password" minlength="6" placeholder="At least 6 characters" required />
+                <div class="password-field">
+                  <input name="password" type="password" minlength="6" placeholder="At least 6 characters" required />
+                  <button class="password-toggle" type="button" data-toggle-password>
+                    Show
+                  </button>
+                </div>
               </label>
               <button class="button-primary" type="submit">Create account and continue</button>
             </form>

@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("logoutBtn");
   const navLoginLink = document.getElementById("navLoginLink");
   const navAccountPill = document.getElementById("navAccountPill");
+  const navAccountText = document.getElementById("navAccountText");
+  const navAccountIcon = document.querySelector(".nav-account-icon");
   const customForm = document.getElementById("customForm");
   const formStatus = document.getElementById("form-status");
 
@@ -296,7 +298,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (navAccountPill) {
       navAccountPill.hidden = false;
-      navAccountPill.textContent = `Logged in: ${customer.name}`;
+      if (navAccountText) {
+        navAccountText.textContent = customer.name;
+      }
+      if (navAccountIcon) {
+        navAccountIcon.textContent = customer.name.charAt(0).toUpperCase();
+      }
       navAccountPill.title = customer.email;
     }
   }

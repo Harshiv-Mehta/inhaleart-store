@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentSessionName = document.getElementById("currentSessionName");
   const currentSessionEmail = document.getElementById("currentSessionEmail");
   const sessionLogoutBtn = document.getElementById("sessionLogoutBtn");
+  const forgotPasswordBtn = document.getElementById("forgotPasswordBtn");
+  const passwordToggleButtons = document.querySelectorAll("[data-toggle-password]");
 
   function setStatus(message, isError = false) {
     authStatus.textContent = message;
@@ -56,6 +58,24 @@ document.addEventListener("DOMContentLoaded", () => {
     authApi.logoutCustomer();
     renderCurrentSession();
     setStatus("You have been logged out.");
+  });
+  forgotPasswordBtn?.addEventListener("click", () => {
+    setStatus("Password reset is not connected to email yet. For now, create a new account or contact Inhale Art for help.");
+  });
+
+  passwordToggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const wrapper = button.closest(".password-field");
+      const input = wrapper?.querySelector("input");
+
+      if (!input) {
+        return;
+      }
+
+      const isHidden = input.type === "password";
+      input.type = isHidden ? "text" : "password";
+      button.textContent = isHidden ? "Hide" : "Show";
+    });
   });
 
   loginForm?.addEventListener("submit", async (event) => {

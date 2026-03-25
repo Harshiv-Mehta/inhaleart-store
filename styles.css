@@ -196,6 +196,7 @@ a {
 .nav-account-pill {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   min-height: 40px;
   padding: 0 14px;
   border-radius: 999px;
@@ -203,6 +204,19 @@ a {
   border: 1px solid rgba(157, 177, 202, 0.18);
   color: #6f69a0;
   white-space: nowrap;
+}
+
+.nav-account-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffdfe8, #d8f5eb 55%, #e9e1ff);
+  color: #564f79;
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 
 .site-nav a:hover {
@@ -1063,6 +1077,44 @@ a {
 
 .auth-form input:focus {
   outline: 2px solid rgba(140, 138, 203, 0.18);
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 84px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(157, 177, 202, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+}
+
+.auth-inline-link {
+  width: fit-content;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #7d74aa;
+  cursor: pointer;
+  font: inherit;
+}
+
+.auth-inline-link:hover,
+.auth-back-link:hover {
+  color: var(--text);
 }
 
 .account-card {
