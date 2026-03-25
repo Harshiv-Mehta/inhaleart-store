@@ -37,46 +37,82 @@
 
     <main class="section section-cream">
       <div class="container auth-layout">
-        <section class="auth-panel reveal is-visible">
-          <p class="eyebrow">Customer access</p>
-          <h1 class="auth-title">Sign in to save your cart.</h1>
-          <p class="section-intro">Create an account once, keep your selections saved on this device, and come back anytime.</p>
+        <div class="auth-shell">
+          <section class="auth-panel auth-panel-copy reveal is-visible">
+            <p class="eyebrow">Customer access</p>
+            <h1 class="auth-title">Welcome back to your saved cart.</h1>
+            <p class="section-intro">
+              Sign in to keep your favorites safe, continue from where you left off, and order faster next time.
+            </p>
 
-          <div class="auth-tabs">
-            <button id="showLoginBtn" class="button-primary" type="button">Login</button>
-            <button id="showSignupBtn" class="button-secondary" type="button">Create account</button>
-          </div>
+            <div class="auth-feature-list">
+              <article class="auth-feature-card">
+                <strong>Saved cart</strong>
+                <p>Your selected pieces stay stored for you on this device after login.</p>
+              </article>
+              <article class="auth-feature-card">
+                <strong>Faster checkout</strong>
+                <p>Your name and email are easier to reuse when you place an order.</p>
+              </article>
+              <article class="auth-feature-card">
+                <strong>Simple signup</strong>
+                <p>Create an account in a few seconds and return to shopping right away.</p>
+              </article>
+            </div>
 
-          <form id="loginForm" class="auth-form">
-            <label>
-              <span>Email</span>
-              <input name="email" type="email" required />
-            </label>
-            <label>
-              <span>Password</span>
-              <input name="password" type="password" required />
-            </label>
-            <button class="button-primary" type="submit">Login</button>
-          </form>
+            <div id="currentSessionCard" class="account-card" hidden>
+              <div>
+                <strong id="currentSessionName">You are already signed in.</strong>
+                <p id="currentSessionEmail"></p>
+              </div>
+              <div class="account-actions">
+                <a class="button-primary" href="index.html">Go to storefront</a>
+                <button id="sessionLogoutBtn" class="button-secondary" type="button">Logout</button>
+              </div>
+            </div>
+          </section>
 
-          <form id="signupForm" class="auth-form" hidden>
-            <label>
-              <span>Name</span>
-              <input name="name" type="text" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input name="email" type="email" required />
-            </label>
-            <label>
-              <span>Password</span>
-              <input name="password" type="password" minlength="6" required />
-            </label>
-            <button class="button-primary" type="submit">Create account</button>
-          </form>
+          <section class="auth-panel reveal is-visible">
+            <div class="auth-tabs">
+              <button id="showLoginBtn" class="button-primary" type="button">Login</button>
+              <button id="showSignupBtn" class="button-secondary" type="button">Create account</button>
+            </div>
 
-          <p id="authStatus" class="form-status" aria-live="polite"></p>
-        </section>
+            <p id="authLead" class="auth-lead">Use your email and password to continue shopping.</p>
+
+            <form id="loginForm" class="auth-form">
+              <label>
+                <span>Email address</span>
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input name="password" type="password" placeholder="Enter your password" required />
+              </label>
+              <button class="button-primary" type="submit">Login to my account</button>
+            </form>
+
+            <form id="signupForm" class="auth-form" hidden>
+              <label>
+                <span>Your name</span>
+                <input name="name" type="text" placeholder="Your full name" required />
+              </label>
+              <label>
+                <span>Email address</span>
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Create password</span>
+                <input name="password" type="password" minlength="6" placeholder="At least 6 characters" required />
+              </label>
+              <button class="button-primary" type="submit">Create account and continue</button>
+            </form>
+
+            <p id="authHelper" class="auth-helper">New here? Create an account and your cart will stay saved after login.</p>
+            <p id="authStatus" class="form-status" aria-live="polite"></p>
+            <a class="auth-back-link" href="index.html">Back to storefront</a>
+          </section>
+        </div>
       </div>
     </main>
 
