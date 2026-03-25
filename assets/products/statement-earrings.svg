@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Inhale Art statement earrings collection</title>
+  <desc id="desc">Pastel dangle earring artwork with sculptural resin silhouettes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff8fc"/>
+      <stop offset="48%" stop-color="#f4fff9"/>
+      <stop offset="100%" stop-color="#f3eaff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+  <rect x="170" y="170" width="860" height="1060" rx="56" fill="#fffefd" fill-opacity=".88" stroke="#ece0ed"/>
+  <circle cx="430" cy="370" r="28" fill="#d7bf98"/>
+  <circle cx="770" cy="370" r="28" fill="#d7bf98"/>
+  <path d="M430 400 C390 490, 390 585, 430 680 C470 585, 470 490, 430 400Z" fill="#cceef5"/>
+  <path d="M430 560 C385 660, 385 780, 430 905 C475 780, 475 660, 430 560Z" fill="#ffd5e4"/>
+  <path d="M770 400 C725 490, 725 610, 770 735 C815 610, 815 490, 770 400Z" fill="#e9e1ff"/>
+  <path d="M770 600 C735 690, 735 785, 770 875 C805 785, 805 690, 770 600Z" fill="#d9f4ea"/>
+  <text x="600" y="128" text-anchor="middle" fill="#726d98" font-family="Georgia, serif" font-size="68">Statement Earrings</text>
+  <text x="600" y="1100" text-anchor="middle" fill="#9389b8" font-family="Arial, sans-serif" font-size="38" letter-spacing="9">BOLD SHAPES WITH SOFT COLOR</text>
+</svg>

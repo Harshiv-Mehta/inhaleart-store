@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inhale Art Admin | Catalog Manager</title>
+    <meta name="description" content="Manage the Inhale Art catalog without editing code." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <div class="container header-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">IA</span>
+          <span class="brand-copy">
+            <strong>Inhale Art</strong>
+            <small>Catalog admin</small>
+          </span>
+        </a>
+
+        <nav class="site-nav">
+          <a href="index.html">Storefront</a>
+          <a href="#editor">Editor</a>
+          <a href="#inventory">Inventory</a>
+          <button id="adminLogoutBtn" class="button-secondary" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container admin-layout">
+        <section id="editor" class="admin-panel">
+          <div class="admin-heading">
+            <div>
+              <p class="eyebrow">Catalog manager</p>
+              <h1>Update products without touching code.</h1>
+            </div>
+            <div class="admin-actions">
+              <button id="newProductBtn" class="button-secondary" type="button">New product</button>
+              <button id="exportBtn" class="button-secondary" type="button">Export JSON</button>
+              <label class="button-secondary import-label">
+                Import JSON
+                <input id="importInput" type="file" accept=".json,application/json" hidden />
+              </label>
+              <button id="resetBtn" class="button-primary" type="button">Reset catalog</button>
+            </div>
+          </div>
+
+          <form id="productForm" class="admin-form">
+            <input type="hidden" id="productId" name="productId" />
+
+            <label>
+              <span>Product name</span>
+              <input id="productName" name="productName" type="text" required />
+            </label>
+
+            <div class="admin-two-col">
+              <label>
+                <span>Price (INR)</span>
+                <input id="productPrice" name="productPrice" type="number" min="1" required />
+              </label>
+
+              <label>
+                <span>Collection</span>
+                <input id="productCollection" name="productCollection" type="text" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Description</span>
+              <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+            </label>
+
+            <div class="admin-two-col">
+              <label>
+                <span>Image URLs</span>
+                <textarea
+                  id="productImages"
+                  name="productImages"
+                  rows="4"
+                  placeholder="https://example.com/image-1.jpg&#10;https://example.com/image-2.jpg"
+                ></textarea>
+                <small class="admin-help">Add one image URL per line. The first image becomes the cover photo.</small>
+              </label>
+
+              <label>
+                <span>Badge</span>
+                <input id="productBadge" name="productBadge" type="text" placeholder="Best seller" />
+              </label>
+            </div>
+
+            <div class="admin-two-col">
+              <label>
+                <span>Art style</span>
+                <select id="productArtStyle" name="productArtStyle">
+                  <option value="resin-mint">Mint glow</option>
+                  <option value="resin-butterfly">Butterfly teal</option>
+                  <option value="resin-ocean">Ocean blue</option>
+                  <option value="resin-heart">Heart cobalt</option>
+                  <option value="resin-aqua">Aqua glitter</option>
+                  <option value="resin-gold">Gold sparkle</option>
+                  <option value="resin-ink">Ink gold</option>
+                  <option value="resin-bloom">Floral pastel</option>
+                  <option value="resin-blush">Blush keepsake</option>
+                  <option value="resin-sparkle">Soft sparkle</option>
+                  <option value="resin-evil-eye">Evil eye</option>
+                  <option value="resin-petal">Pressed petal</option>
+                  <option value="resin-confetti">Confetti mix</option>
+                  <option value="resin-leaf">Leaf green</option>
+                  <option value="resin-pearl">Soft pearl</option>
+                </select>
+              </label>
+
+              <div class="admin-switches">
+                <label class="switch-row">
+                  <input id="productFeatured" name="productFeatured" type="checkbox" />
+                  <span>Featured product</span>
+                </label>
+                <label class="switch-row">
+                  <input id="productActive" name="productActive" type="checkbox" checked />
+                  <span>Active on storefront</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="admin-form-actions">
+              <button type="submit" class="button-primary">Save product</button>
+              <button id="deleteBtn" type="button" class="button-secondary">Delete product</button>
+            </div>
+            <p id="adminStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <aside id="inventory" class="inventory-panel">
+          <div class="inventory-head">
+            <div>
+              <p class="eyebrow">Inventory</p>
+              <h2>Current catalog</h2>
+            </div>
+            <p id="inventoryCount" class="inventory-count"></p>
+          </div>
+          <div id="inventoryList" class="inventory-list"></div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="catalog-data.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

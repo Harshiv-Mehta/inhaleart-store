@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Inhale Art home decor collection</title>
+  <desc id="desc">Pastel resin coaster artwork in a styled tabletop layout.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef9fd"/>
+      <stop offset="50%" stop-color="#eefaf5"/>
+      <stop offset="100%" stop-color="#f3ecff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+  <rect x="140" y="180" width="920" height="1040" rx="56" fill="#fffefc" fill-opacity=".88" stroke="#ede2ea"/>
+  <rect x="270" y="360" width="290" height="290" rx="48" fill="#ffdfe7"/>
+  <rect x="640" y="360" width="290" height="290" rx="48" fill="#d9f4ea"/>
+  <rect x="270" y="730" width="290" height="290" rx="48" fill="#e8e1ff"/>
+  <rect x="640" y="730" width="290" height="290" rx="48" fill="#ffe8cb"/>
+  <circle cx="415" cy="505" r="80" fill="#fff" fill-opacity=".55"/>
+  <circle cx="785" cy="505" r="80" fill="#fff" fill-opacity=".55"/>
+  <circle cx="415" cy="875" r="80" fill="#fff" fill-opacity=".55"/>
+  <circle cx="785" cy="875" r="80" fill="#fff" fill-opacity=".55"/>
+  <text x="600" y="132" text-anchor="middle" fill="#746f97" font-family="Georgia, serif" font-size="72">Home Decor</text>
+  <text x="600" y="1125" text-anchor="middle" fill="#9588ba" font-family="Arial, sans-serif" font-size="40" letter-spacing="10">TABLETOP BLOOM STORIES</text>
+</svg>

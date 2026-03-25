@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inhale Art | Login</title>
+    <meta name="description" content="Sign in to save your cart and continue shopping with Inhale Art." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <header class="site-header">
+      <div class="container header-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">IA</span>
+          <span class="brand-copy">
+            <strong>Inhale Art</strong>
+            <small>Resin studio</small>
+          </span>
+        </a>
+        <nav class="site-nav">
+          <a href="index.html#featured">Shop</a>
+          <a href="index.html#custom">Custom</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section section-cream">
+      <div class="container auth-layout">
+        <section class="auth-panel reveal is-visible">
+          <p class="eyebrow">Customer access</p>
+          <h1 class="auth-title">Sign in to save your cart.</h1>
+          <p class="section-intro">Create an account once, keep your selections saved on this device, and come back anytime.</p>
+
+          <div class="auth-tabs">
+            <button id="showLoginBtn" class="button-primary" type="button">Login</button>
+            <button id="showSignupBtn" class="button-secondary" type="button">Create account</button>
+          </div>
+
+          <form id="loginForm" class="auth-form">
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" required />
+            </label>
+            <button class="button-primary" type="submit">Login</button>
+          </form>
+
+          <form id="signupForm" class="auth-form" hidden>
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" minlength="6" required />
+            </label>
+            <button class="button-primary" type="submit">Create account</button>
+          </form>
+
+          <p id="authStatus" class="form-status" aria-live="polite"></p>
+        </section>
+      </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Inhale Art stud bar collection</title>
+  <desc id="desc">Pastel stud earring artwork with sparkly mini shapes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffafe"/>
+      <stop offset="50%" stop-color="#eefbff"/>
+      <stop offset="100%" stop-color="#f4ecff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+  <rect x="170" y="180" width="860" height="1040" rx="56" fill="#fffefd" fill-opacity=".88" stroke="#eadff0"/>
+  <circle cx="360" cy="500" r="78" fill="#8de0d4"/>
+  <circle cx="530" cy="500" r="78" fill="#f9c6d8"/>
+  <circle cx="700" cy="500" r="78" fill="#d9cdfa"/>
+  <circle cx="870" cy="500" r="78" fill="#ffe3bf"/>
+  <rect x="305" y="720" width="110" height="110" rx="32" fill="#d8f5eb"/>
+  <rect x="475" y="720" width="110" height="110" rx="32" fill="#ffdfe8"/>
+  <rect x="645" y="720" width="110" height="110" rx="32" fill="#e9e1ff"/>
+  <rect x="815" y="720" width="110" height="110" rx="32" fill="#cceef5"/>
+  <text x="600" y="132" text-anchor="middle" fill="#766f9c" font-family="Georgia, serif" font-size="72">Stud Bar</text>
+  <text x="600" y="1100" text-anchor="middle" fill="#9389b8" font-family="Arial, sans-serif" font-size="40" letter-spacing="10">DAILY SPARKLE PICKS</text>
+</svg>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inhale Art | Admin Login</title>
+    <meta name="description" content="Admin access for the Inhale Art catalog." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <div class="container header-shell">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">IA</span>
+          <span class="brand-copy">
+            <strong>Inhale Art</strong>
+            <small>Admin access</small>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="section section-blush">
+      <div class="container auth-layout">
+        <section class="auth-panel reveal is-visible">
+          <p class="eyebrow">Private editor</p>
+          <h1 class="auth-title">Admin login</h1>
+          <p class="section-intro">Enter your admin password to open the catalog editor.</p>
+
+          <form id="adminLoginForm" class="auth-form">
+            <label>
+              <span>Password</span>
+              <input id="adminPassword" name="password" type="password" required />
+            </label>
+            <button class="button-primary" type="submit">Open admin</button>
+          </form>
+
+          <p id="adminLoginStatus" class="form-status" aria-live="polite"></p>
+        </section>
+      </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="admin-login.js"></script>
+  </body>
+</html>

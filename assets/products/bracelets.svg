@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Inhale Art bracelet collection</title>
+  <desc id="desc">Pastel bracelet artwork with floating resin charms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff8fc"/>
+      <stop offset="45%" stop-color="#f4fffb"/>
+      <stop offset="100%" stop-color="#efe6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+  <rect x="155" y="170" width="890" height="1060" rx="52" fill="#fffefd" fill-opacity=".86" stroke="#eedfea"/>
+  <circle cx="410" cy="520" r="170" fill="none" stroke="#d8c49b" stroke-width="24"/>
+  <circle cx="780" cy="730" r="190" fill="none" stroke="#d8c49b" stroke-width="24"/>
+  <circle cx="410" cy="520" r="78" fill="#d9f4ea"/>
+  <circle cx="780" cy="730" r="86" fill="#dfe8ff"/>
+  <circle cx="410" cy="520" r="34" fill="#7a77c8"/>
+  <circle cx="780" cy="730" r="40" fill="#f7bccf"/>
+  <circle cx="575" cy="430" r="28" fill="#ffe4cf"/>
+  <circle cx="655" cy="815" r="30" fill="#cdeee6"/>
+  <circle cx="290" cy="655" r="24" fill="#f5d9ff"/>
+  <circle cx="930" cy="610" r="24" fill="#ffe4cf"/>
+  <text x="600" y="128" text-anchor="middle" fill="#746e9a" font-family="Georgia, serif" font-size="74">Bracelets</text>
+  <text x="600" y="1130" text-anchor="middle" fill="#8b81b0" font-family="Arial, sans-serif" font-size="42" letter-spacing="10">CHARM STACKS AND SOFT COLOR</text>
+</svg>
