@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cart = Array.isArray(authApi?.loadCart()) ? authApi.loadCart() : [];
   let razorpayReady = false;
 
+  function resetCheckoutState() {
+    setCheckoutAvailability();
+  }
+
   if (menuToggle && siteNav) {
     menuToggle.addEventListener("click", () => {
       const isOpen = siteNav.classList.toggle("is-open");
@@ -463,10 +467,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (!verifyResponse.ok || !verifyPayload.ok) {
             window.alert("Payment was received but verification failed. Please contact Inhale Art.");
+            resetCheckoutState();
             return;
           }
 
+          cart.splice(0, cart.length);
+          renderCart();
           window.alert("Payment successful. Your order request has been confirmed.");
+          resetCheckoutState();
         },
         theme: {
           color: "#8fd8bf",
@@ -476,11 +484,21 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
 
+      razorpay.on("payment.failed", (event) => {
+        const reason = event?.error?.description || "Payment failed before completion.";
+        window.alert(reason);
+        resetCheckoutState();
+      });
+
+      razorpay.on("modal.ondismiss", () => {
+        resetCheckoutState();
+      });
+
       razorpay.open();
     } catch (error) {
       window.alert(error.message || "Payment could not be started. Deploy the site and configure Razorpay keys.");
     } finally {
-      setCheckoutAvailability();
+      resetCheckoutState();
     }
   });
 

@@ -16,8 +16,9 @@ module.exports = async (req, res) => {
   try {
     const body = await parseJsonBody(req);
     const { amount, notes } = body || {};
+    const normalizedAmount = Number(amount);
 
-    if (!Number.isInteger(amount) || amount < 100) {
+    if (!Number.isInteger(normalizedAmount) || normalizedAmount < 100) {
       return res.status(400).json({ error: "Invalid order amount" });
     }
 
@@ -30,10 +31,10 @@ module.exports = async (req, res) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        amount,
+        amount: normalizedAmount,
         currency: "INR",
         receipt: `inhaleart_${Date.now()}`,
-        notes: notes || {},
+        notes: notes && typeof notes === "object" ? notes : {},
       }),
     });
 
